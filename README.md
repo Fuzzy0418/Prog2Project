@@ -19,6 +19,11 @@ description coming soon...
 			- Employee account delete/suspend
 			- Employee statistics
 			- Employee permissions edit
+		- Roles
+			- Create new role
+			- Edit role
+				- Permissions, name
+			- Delete role
 		- Products
 			- Create new product
 			- Products edit
@@ -71,6 +76,15 @@ description coming soon...
 - Change password
 - Private messages
 - Own statistics
+
+## Create new employee account
+- username
+- generate random password
+- gender
+- role
+- permissions
+- salary (?)
+- save => registerDate, lastLoginDate
 
 ## Plans
 
