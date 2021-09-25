@@ -66,7 +66,11 @@ description coming soon...
 - Encome/expend/profit
 
 ## Profil
-- Avatar img
+- change avatar img
+- Log out
+- Change password
+- Private messages
+- Own statistics
 
 ## Plans
 
