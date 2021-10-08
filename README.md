@@ -14,4 +14,6 @@
     - cString => connectionString
     - onlyAdmin => true/false (Only admin can log in)
   - Add MSSQL connection
+    - With dbConnect class
   - Add Feedback messages
+  - Add Users class
