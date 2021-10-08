@@ -8,3 +8,9 @@
 # V0.1
   - Close button
   - Login panel design
+
+# V0.2
+  - Add config file
+    - cString => connectionString
+    - onlyAdmin => true/false (Only admin can log in)
+  - Add MSSQL connection
