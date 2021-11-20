@@ -45,3 +45,12 @@
 
 # V0.8
   - products, categories, users class convert to struct
+  - PRODUCTS, CATEGORIES loading fixed
+  - Add productModify function
+  - Add categoryModify function
+  - Add categoryDelete function
+
+# V0.9
+  - Fixed productModify function
+  - Fixed categoryDelete function
+  - Add productDelete function
