@@ -54,3 +54,4 @@
   - Fixed productModify function
   - Fixed categoryDelete function
   - Add productDelete function
+  - Add password hash function
