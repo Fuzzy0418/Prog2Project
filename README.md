@@ -3,7 +3,6 @@
   - Register System
   - Products/Categories  (create, edit, delete)
   - Statistics
-  - Private Message
 
 # V0.1
   - Close button
