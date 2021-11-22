@@ -54,3 +54,4 @@
   - Fixed categoryDelete function
   - Add productDelete function
   - Add password hash function
+  - Windows are draggable
