@@ -55,3 +55,6 @@
   - Add productDelete function
   - Add password hash function
   - Windows are draggable
+  - Tables are redesigned
+  - Add billing menu and function
+  - Add transactions list
