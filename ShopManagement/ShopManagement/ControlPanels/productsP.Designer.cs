@@ -56,7 +56,6 @@
             // 
             // products_grid
             // 
-
             this.products_grid.AllowUserToAddRows = false;
             this.products_grid.AllowUserToDeleteRows = false;
             this.products_grid.AllowUserToResizeColumns = false;
@@ -66,8 +65,8 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.NavajoWhite;
             this.products_grid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.products_grid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.products_grid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.products_grid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.products_grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -101,8 +100,9 @@
             this.products_grid.EnableHeadersVisualStyles = false;
             this.products_grid.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.products_grid.Location = new System.Drawing.Point(0, 0);
+            this.products_grid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.products_grid.MultiSelect = false;
-            this.products_grid.Name = "transactions_grid";
+            this.products_grid.Name = "products_grid";
             this.products_grid.ReadOnly = true;
             this.products_grid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -117,9 +117,10 @@
             this.products_grid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.products_grid.RowTemplate.Height = 24;
             this.products_grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.products_grid.Size = new System.Drawing.Size(488, 518);
+            this.products_grid.Size = new System.Drawing.Size(366, 421);
             this.products_grid.TabIndex = 0;
             this.products_grid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.products_grid_CellClick);
+            this.products_grid.VisibleChanged += new System.EventHandler(this.products_grid_VisibleChanged);
             // 
             // id
             // 
@@ -155,7 +156,6 @@
             this.price.MinimumWidth = 100;
             this.price.Name = "price";
             this.price.ReadOnly = true;
-            this.price.Width = 100;
             // 
             // discount
             // 
@@ -182,18 +182,19 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(150)))), ((int)(((byte)(50)))));
-            this.label_name.Location = new System.Drawing.Point(820, 72);
+            this.label_name.Location = new System.Drawing.Point(615, 58);
             this.label_name.Margin = new System.Windows.Forms.Padding(0);
             this.label_name.Name = "label_name";
-            this.label_name.Size = new System.Drawing.Size(107, 18);
+            this.label_name.Size = new System.Drawing.Size(80, 15);
             this.label_name.TabIndex = 1;
             this.label_name.Text = "Megnevezés:";
             // 
             // input_pName
             // 
-            this.input_pName.Location = new System.Drawing.Point(833, 93);
+            this.input_pName.Location = new System.Drawing.Point(625, 76);
+            this.input_pName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.input_pName.Name = "input_pName";
-            this.input_pName.Size = new System.Drawing.Size(254, 22);
+            this.input_pName.Size = new System.Drawing.Size(192, 20);
             this.input_pName.TabIndex = 2;
             // 
             // label_category
@@ -201,9 +202,10 @@
             this.label_category.AutoSize = true;
             this.label_category.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label_category.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(150)))), ((int)(((byte)(50)))));
-            this.label_category.Location = new System.Drawing.Point(820, 129);
+            this.label_category.Location = new System.Drawing.Point(615, 105);
+            this.label_category.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_category.Name = "label_category";
-            this.label_category.Size = new System.Drawing.Size(85, 18);
+            this.label_category.Size = new System.Drawing.Size(73, 15);
             this.label_category.TabIndex = 3;
             this.label_category.Text = "Kategória:";
             // 
@@ -212,17 +214,19 @@
             this.label_price.AutoSize = true;
             this.label_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label_price.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(150)))), ((int)(((byte)(50)))));
-            this.label_price.Location = new System.Drawing.Point(820, 189);
+            this.label_price.Location = new System.Drawing.Point(615, 154);
+            this.label_price.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_price.Name = "label_price";
-            this.label_price.Size = new System.Drawing.Size(29, 18);
+            this.label_price.Size = new System.Drawing.Size(24, 15);
             this.label_price.TabIndex = 5;
             this.label_price.Text = "Ár:";
             // 
             // input_pPrice
             // 
-            this.input_pPrice.Location = new System.Drawing.Point(833, 210);
+            this.input_pPrice.Location = new System.Drawing.Point(625, 171);
+            this.input_pPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.input_pPrice.Name = "input_pPrice";
-            this.input_pPrice.Size = new System.Drawing.Size(104, 22);
+            this.input_pPrice.Size = new System.Drawing.Size(79, 20);
             this.input_pPrice.TabIndex = 6;
             this.input_pPrice.Text = "0";
             // 
@@ -231,17 +235,19 @@
             this.label_discount.AutoSize = true;
             this.label_discount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label_discount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(150)))), ((int)(((byte)(50)))));
-            this.label_discount.Location = new System.Drawing.Point(946, 189);
+            this.label_discount.Location = new System.Drawing.Point(710, 154);
+            this.label_discount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_discount.Name = "label_discount";
-            this.label_discount.Size = new System.Drawing.Size(55, 18);
+            this.label_discount.Size = new System.Drawing.Size(45, 15);
             this.label_discount.TabIndex = 7;
             this.label_discount.Text = "Akció:";
             // 
             // input_pDiscount
             // 
-            this.input_pDiscount.Location = new System.Drawing.Point(981, 210);
+            this.input_pDiscount.Location = new System.Drawing.Point(736, 171);
+            this.input_pDiscount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.input_pDiscount.Name = "input_pDiscount";
-            this.input_pDiscount.Size = new System.Drawing.Size(106, 22);
+            this.input_pDiscount.Size = new System.Drawing.Size(80, 20);
             this.input_pDiscount.TabIndex = 8;
             this.input_pDiscount.Text = "0";
             // 
@@ -250,17 +256,19 @@
             this.label_db.AutoSize = true;
             this.label_db.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label_db.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(150)))), ((int)(((byte)(50)))));
-            this.label_db.Location = new System.Drawing.Point(820, 251);
+            this.label_db.Location = new System.Drawing.Point(615, 204);
+            this.label_db.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_db.Name = "label_db";
-            this.label_db.Size = new System.Drawing.Size(99, 18);
+            this.label_db.Size = new System.Drawing.Size(84, 15);
             this.label_db.TabIndex = 9;
             this.label_db.Text = "Darabszám:";
             // 
             // input_pDb
             // 
-            this.input_pDb.Location = new System.Drawing.Point(833, 272);
+            this.input_pDb.Location = new System.Drawing.Point(625, 221);
+            this.input_pDb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.input_pDb.Name = "input_pDb";
-            this.input_pDb.Size = new System.Drawing.Size(104, 22);
+            this.input_pDb.Size = new System.Drawing.Size(79, 20);
             this.input_pDb.TabIndex = 10;
             this.input_pDb.Text = "0";
             // 
@@ -270,9 +278,10 @@
             this.button_pSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button_pSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_pSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_pSave.Location = new System.Drawing.Point(900, 331);
+            this.button_pSave.Location = new System.Drawing.Point(675, 269);
+            this.button_pSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_pSave.Name = "button_pSave";
-            this.button_pSave.Size = new System.Drawing.Size(120, 43);
+            this.button_pSave.Size = new System.Drawing.Size(90, 35);
             this.button_pSave.TabIndex = 11;
             this.button_pSave.Text = "Mentés";
             this.button_pSave.UseVisualStyleBackColor = true;
@@ -284,9 +293,10 @@
             this.button_pDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button_pDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_pDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_pDelete.Location = new System.Drawing.Point(900, 394);
+            this.button_pDelete.Location = new System.Drawing.Point(675, 320);
+            this.button_pDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_pDelete.Name = "button_pDelete";
-            this.button_pDelete.Size = new System.Drawing.Size(120, 43);
+            this.button_pDelete.Size = new System.Drawing.Size(90, 35);
             this.button_pDelete.TabIndex = 11;
             this.button_pDelete.Text = "Törlés";
             this.button_pDelete.UseVisualStyleBackColor = true;
@@ -295,14 +305,15 @@
             // input_pCategory
             // 
             this.input_pCategory.FormattingEnabled = true;
-            this.input_pCategory.Location = new System.Drawing.Point(833, 150);
+            this.input_pCategory.Location = new System.Drawing.Point(625, 122);
+            this.input_pCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.input_pCategory.Name = "input_pCategory";
-            this.input_pCategory.Size = new System.Drawing.Size(254, 24);
+            this.input_pCategory.Size = new System.Drawing.Size(192, 21);
             this.input_pCategory.TabIndex = 12;
             // 
             // productsP
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.Controls.Add(this.input_pCategory);
@@ -320,7 +331,7 @@
             this.Controls.Add(this.products_grid);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "productsP";
-            this.Size = new System.Drawing.Size(868, 530);
+            this.Size = new System.Drawing.Size(651, 431);
             ((System.ComponentModel.ISupportInitialize)(this.products_grid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

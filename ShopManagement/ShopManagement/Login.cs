@@ -11,6 +11,9 @@ namespace ShopManagement
         public loginBG() {
             InitializeComponent();
 
+            radio_employee.Hide();
+            radio_admin.Hide();
+
             ControlExtension.Draggable(this, true);
         }
 
@@ -33,18 +36,10 @@ namespace ShopManagement
         //Login button 'click' event
         private void button_login_Click(object sender, EventArgs e)
         {
-            if (radio_employee.Checked != radio_admin.Checked)
-            {
-                if ((Program.CONFIG.Get("onlyAdmin") == "true" && radio_admin.Checked) || Program.CONFIG.Get("onlyAdmin") == "false")
-                {
-                    if (input_username.Text != "" || input_password.Text != "" || input_username.Text == "username" || input_password.Text == "password")
-                        login(input_username.Text, input_password.Text);
-                    else
-                        MessageBox.Show("Minden mező kitöltése kötelező!");
-                } else
-                    MessageBox.Show("Karbantartás alatt van!");
-            } else
-                MessageBox.Show("Válassz szerepet!");
+            if (input_username.Text != "" || input_password.Text != "" || input_username.Text == "username" || input_password.Text == "password")
+                login(input_username.Text, input_password.Text);
+            else
+                MessageBox.Show("Minden mező kitöltése kötelező!");
         }
 
         //Login function
@@ -55,18 +50,11 @@ namespace ShopManagement
 
             if (result.Count > 0) {
                 if (ComparePasswords(result[0]["password"].ToString(), password)){
-                    if (result[0]["role"].ToString() == "admin" && radio_admin.Checked || result[0]["role"].ToString() == "employee" && radio_employee.Checked)
-                    {
-                        this.Hide();
-                        management mForm = new management();
-                        mForm.Show();
+                    this.Hide();
+                    management mForm = new management();
+                    mForm.Show();
 
-                        return;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Hibás szerepkör!");
-                    }
+                    return;
                 } else
                 {
                     MessageBox.Show("Hibás felhasználónév és/vagy jelszó!");

@@ -84,6 +84,7 @@
             this.transactions_grid.EnableHeadersVisualStyles = false;
             this.transactions_grid.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.transactions_grid.Location = new System.Drawing.Point(0, 0);
+            this.transactions_grid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.transactions_grid.MultiSelect = false;
             this.transactions_grid.Name = "transactions_grid";
             this.transactions_grid.ReadOnly = true;
@@ -100,8 +101,9 @@
             this.transactions_grid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.transactions_grid.RowTemplate.Height = 24;
             this.transactions_grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.transactions_grid.Size = new System.Drawing.Size(517, 518);
+            this.transactions_grid.Size = new System.Drawing.Size(388, 421);
             this.transactions_grid.TabIndex = 0;
+            this.transactions_grid.VisibleChanged += new System.EventHandler(this.transactions_grid_VisibleChanged);
             // 
             // id
             // 
@@ -141,13 +143,13 @@
             // 
             // tranzactionsP
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.Controls.Add(this.transactions_grid);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "tranzactionsP";
-            this.Size = new System.Drawing.Size(868, 530);
+            this.Size = new System.Drawing.Size(651, 431);
             ((System.ComponentModel.ISupportInitialize)(this.transactions_grid)).EndInit();
             this.ResumeLayout(false);
 

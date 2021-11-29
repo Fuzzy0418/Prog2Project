@@ -259,5 +259,17 @@ namespace ShopManagement.ControlPanels
             button_pSave.Text = Program.CONFIG.Get("editItem");
             product = new products();
         }
+
+        private void products_grid_VisibleChanged(object sender, EventArgs e)
+        {
+            products_grid.Rows.Clear();
+            input_pCategory.Items.Clear();
+
+            foreach (products product in Program.PRODUCTS)
+                products_grid.Rows.Add(product.id, product.name, product.cID, $"{product.price} Ft", $"{product.discount} %", $"{product.count} db");
+
+            foreach (categories category in Program.CATEGORIES)
+                input_pCategory.Items.Add(category.name);
+        }
     }
 }
